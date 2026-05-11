@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#home" class="nav-link">Главная</a>
+            <a href="#about" class="nav-link">О нас</a>
+            <a href="#services" class="nav-link">Услуги</a>
+            <a href="#contact" class="nav-link">Контакты</a>
+        </nav>
+    </header>
+
+
+    <section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Подготовим  <span id="typewriter"></span> без стресса</h1>
+        <p>Понятно объясняем сложные темы, закрываем пробелы и доводим до уверенного результата</p>
+        <a href="#about" class="hero-btn">Узнать больше</a>
+    </div>
+    </section>
+
+    <section id="about" class="section">
+    <div class="container">
+        <h2 class="section-title">Почему выбирают нас</h2>
+
+        <div class="about-grid">
+            <div class="about-item reveal">
+                <div class="about-img">
+                    <img src="teacher1.jpg" alt="Опытные педагоги">
+                </div>
+                <h3>Опытные эксперты</h3>
+                <p>Наши преподаватели — действующие эксперты ЕГЭ, которые знают все ловушки и тонкости проверки работ.</p>
+            </div>
+            <div class="about-item reveal">
+                <div class="about-img">
+                    <img src="support.jpg" alt="Поддержка">
+                </div>
+                <h3>Поддержка 24/7</h3>
+                <p>Кураторы всегда на связи, чтобы ответить на любой вопрос по домашке или просто поддержать в трудную минуту.</p>
+            </div>
+        </div>
+
+
+        <h2 class="sub-title reveal">Наша статистика</h2>
+
+        <div class="stats-wide-card reveal">
+            <div class="stat-box">
+                <span class="stat-num">450+</span>
+                <span class="stat-desc">выпускников в год</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-num">88.5</span>
+                <span class="stat-desc">средний балл егэ</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-num">9 лет</span>
+                <span class="stat-desc">опыта подготовки</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-num">100%</span>
+                <span class="stat-desc">прохождение порога</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="gallery-section reveal">
+    <div class="container">
+        <h2 class="sub-title">Жизнь нашей школы</h2>
+        
+        <div class="slider">
+            <div class="slides">
+                <div class="slide active">
+                    <img src="cheater1.jpg" alt="">
+                    <div class="slide-info">Разбор сложных тем</div>
+                </div>
+                <div class="slide">
+                    <img src="jopa.jpg" alt="Атмосфера">
+                    <div class="slide-info">Уютные классы</div>
+                </div>
+                <div class="slide">
+                    <img src="book.jpg" alt="Материалы">
+                    <div class="slide-info">Наши пособия</div>
+                </div>
+            </div>
+
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
+            <div class="dots">
+                <span class="dot active" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="services" class="section services">
+    <div class="container">
+        <h2 class="section-title">Наши услуги</h2>
+        
+        <h3 class="sub-title">Направления подготовки</h3>
+        <div class="services-grid subject-packets">
+            <div class="service-card subject-card reveal">
+                <div class="subject-tag">Популярно</div>
+                <h3>Технический профиль</h3>
+                <p class="subject-info">Математика + Физика / Информатика</p>
+                <div class="price">от 4 500 ₽/мес</div>
+                <button type="button" onclick="openServiceModal('Технический профиль')" class="service-btn">Выбрать пакет</button>
+            </div>
+
+            <div class="service-card subject-card reveal">
+                <h3>Гуманитарный профиль</h3>
+                <p class="subject-info">Русский язык + Обществознание / История</p>
+                <div class="price">от 4 200 ₽/мес</div>
+                <button type="button" onclick="openServiceModal('Гуманитарный профиль')" class="service-btn">Выбрать пакет</button>
+            </div>
+        </div>
+
+        <h3 class="sub-title">Форматы занятий</h3>
+        <div class="services-grid formats-grid">
+            <div class="service-card format-card reveal">
+                <div class="icon">👥</div>
+                <h3>Мини-группы</h3>
+                <p>Занятия по 3-5 человек.</p>
+                <button type="button" onclick="openServiceModal('Мини-группы')" class="service-btn">Записаться</button>
+            </div>
+            </div>
+    </div>
+</section>
+
+<div id="service-modal" class="modal-overlay">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeServiceModal()">&times;</span>
+        
+        <div class="modal-icon">🚀</div>
+        
+        <h3 id="modal-title">Заявка на обучение</h3>
+        <p class="modal-subtitle">Оставьте ваши данные, и мы свяжемся с вами в течение 15 минут для консультации.</p>
+        
+        <form class="contact-form" id="tg-form">
+            <input type="hidden" id="selected-package" name="package">
+            
+            <div class="input-wrapper">
+                <input type="text" name="name" placeholder="Как вас зовут?" required>
+            </div>
+            
+            <div class="input-wrapper">
+                <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required>
+            </div>
+            
+            <button type="submit" class="contact-btn">Начать подготовку</button>
+            
+            <p class="form-disclaimer">
+                Нажимая кнопку, вы соглашаетесь с условиями конфиденциальности
+            </p>
+        </form>
+    </div>
+</div>
+
+<section id="contact" class="section contact">
+    <div class="container">
+        <h2 class="section-title">Контакты и местоположение</h2>
+        
+        <div class="contact-wrapper">
+            <div class="contact-details reveal">
+                <h3>Свяжитесь с нами</h3>
+                <p>Мы всегда на связи, чтобы помочь вам составить план подготовки.</p>
+                
+                <div class="contact-list">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-text">
+                            <strong>Адрес:</strong><br>
+                            г. Краснодар, ул. Таманская, д. 10, офис 205
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-text">
+                            <strong>Телефон:</strong><br>
+                            <a href="tel:+79990000000">+8 (861) 944-07-72</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">💬</div>
+                        <div class="contact-text">
+                            <strong>Мессенджеры:</strong><br>
+                            <a href="#">Telegram</a> / <a href="#">WhatsApp</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-text">
+                            <strong>Почта:</strong><br>
+                            info@school-oge.ru
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-map reveal">
+                <div id="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309538.943026307!2d35.77402180569955!3d45.48208503452372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f04f965f7bef21%3A0x4b07fc4e3357b682!2z0KbQtdC90YLRgCDQv9C-0LTQs9C-0YLQvtCy0LrQuCDQuiDQldCT0K0g0Lgg0J7Qk9CtINCT0L7QtNC-0LPRgNCw0YQgfCDQmtGA0LDRgdC90L7QtNCw0YA!5e0!3m2!1sru!2sru!4v1777295542053!5m2!1sru!2sru" width="1000" height="1000" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col brand">
+                <div class="footer-logo">
+                    <h2>Prep<span>Studio</span></h2>
+                </div>
+                <p>Твой путь к высокому баллу начинается здесь. Подготовка к ОГЭ и ЕГЭ с душой.</p>
+                <div class="footer-socials">
+                    <a href="#" class="social-box">TG</a>
+                    <a href="#" class="social-box">VK</a>
+                    <a href="#" class="social-box">YT</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Навигация</h4>
+                <ul class="footer-links">
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#services">Направления</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contacts">
+                <h4>Связь</h4>
+                <p>📍 г. Краснодар, ул. Таманская, 180</p>
+                <p>📞 +8 (861) 944-07-72</p>
+                <button onclick="openServiceModal('Заявка')" class="main-btn red-btn submit-animation">
+                    Записаться на урок
+                </button>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2026 <span>PrepStudio</span>. Все права защищены.</p>
+                <div class="footer-bottom-line"></div>
+                <p class="footer-made-by">Сделано с ❤️ для будущих студентов</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<div id="service-modal" class="modal-overlay">
+    <div class="modal-content modern-card">
+        <button class="close-btn" onclick="closeServiceModal()">&times;</button>
+        
+        <div class="modal-header">
+            <div class="rocket-icon">🚀</div>
+            <h3 id="modal-title">Заявка</h3>
+            <p class="modal-desc">Оставьте ваши данные, и мы свяжемся с вами в течение 15 минут для консультации.</p>
+        </div>
+        
+        <form id="tg-form" class="modern-form">
+            <input type="hidden" id="selected-package">
+            
+            <div class="input-group">
+                <input type="text" id="user_name" placeholder="Как вас зовут?" required>
+            </div>
+            
+            <div class="input-group">
+                <input type="tel" id="user_phone" placeholder="+7 (___) ___-__-__" required>
+            </div>
+            
+            <button type="submit" class="main-btn red-btn full-width">
+                <span>Начать подготовку</span>
+            </button>
+            
+            <p class="form-policy">
+                Нажимая кнопку, вы соглашаетесь с <a href="#">условиями конфиденциальности</a>
+            </p>
+            <div id="form-status"></div>
+        </form>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+</body>

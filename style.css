@@ -1,0 +1,1319 @@
+html{
+        scroll-behavior: smooth;
+}
+
+
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-item:nth-child(2) { transition-delay: 0.2s; }
+.about-item:nth-child(3) { transition-delay: 0.4s; }
+
+.service-card:nth-child(2) { transition-delay: 0.2s; }
+.service-card:nth-child(3) { transition-delay: 0.4s; }
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #333;
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+
+:root {
+    --header-height: 80px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.section {
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+}
+
+#home { background: #f4f4f4; }
+#about { background: #ddd; }
+#services { background: #bbb; }
+#contact { background: #999; }
+
+
+
+
+
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/Gemini_Generated_Image_ruopyyruopyyruop.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.4;
+
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to bottom, transparent, white);
+}
+
+.hero-content {
+    position: relative;
+    color: rgb(0, 0, 0);
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #ff6b6b;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: #ff4b4b;
+}
+
+.about {
+    height: 100vh;
+    padding: 80px 10%;
+    background-color: #fff;
+    color: #333;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #111;
+}
+
+
+.about-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.about-item {
+    flex: 1;
+    text-align: center;
+}
+
+
+.about-img {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.about-item:hover img {
+    transform: scale(1.05);
+}
+
+.about-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #cc0000;
+}
+
+.about-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+
+.about .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.sub-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 800;
+    
+    margin: 60px 0 40px;
+    color: #1a1a1a;
+    position: relative;
+}
+
+
+.sub-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #ff0000;
+    margin: 10px auto 0;
+}
+
+
+.stats-wide-card {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    background: #111;
+    padding: 50px 20px;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+
+.stat-box {
+    text-align: center;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    flex: 1;
+    min-width: 200px;
+    transition: transform 0.3s ease;
+
+}
+
+.stat-box:hover {
+    transform: translateY(-10px);
+}
+
+
+.stat-num {
+    display: block;
+    color: #ff0000;
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.1);
+    font-family: 'Arial Black', sans-serif;
+}
+
+
+.stat-desc {
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.7;
+}
+
+
+
+
+
+
+.slider {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+
+.slide-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(204, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.prev:hover, .next:hover {
+    background: #cc0000; 
+}
+.next {
+    right: 0; 
+}
+.prev {
+    left: 0; 
+}
+
+
+.dots {
+    text-align: center;
+    padding: 15px;
+    background: #111;
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.dot.active, .dot:hover { background-color: #cc0000; }
+
+
+.services {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 380px;
+    flex: 1;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+
+.subject-card {
+    border-top: 5px solid #cc0000;
+    position: relative;
+}
+
+.subject-tag {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #cc0000;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.subject-info {
+    color: #cc0000;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin: 20px 0;
+}
+
+
+.format-card.featured {
+    background: #111;
+    color: #fff;
+}
+
+.format-card.featured h3 { color: #fff; }
+
+.icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.features li::before {
+    content: "• ";
+    color: #cc0000;
+    font-weight: bold;
+}
+
+
+
+.modal-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.modal-subtitle {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 30px !important;
+    line-height: 1.4;
+}
+
+
+.input-wrapper {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+
+.form-disclaimer {
+    margin-top: 15px;
+    font-size: 11px;
+    color: #aaa;
+    line-height: 1.2;
+}
+
+
+@media (max-width: 480px) {
+    .modal-content {
+        padding: 40px 20px;
+    }
+    
+    #modal-title {
+        font-size: 1.5rem;
+    }
+}
+
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px);
+}
+
+
+.modal-content {
+    background: #fff;
+    padding: 40px;
+    border-radius: 25px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    transform: scale(0.8);
+    transition: 0.3s ease-out;
+}
+
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1); 
+}
+
+
+.close-modal {
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+}
+
+
+.service-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #cc0000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-top: auto;
+    transition: 0.3s;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.service-btn.outline {
+    background: transparent;
+    border: 1px solid #cc0000;
+    color: #cc0000;
+}
+
+.service-btn:hover {
+    background: #990000;
+    color: #fff;
+}
+
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+.contact-details h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.contact-list {
+    margin-top: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.contact-icon {
+    font-size: 24px;
+    margin-right: 15px;
+    background: #fdf2f2;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.contact-text strong {
+    display: block;
+    color: #cc0000;
+}
+
+.contact-text a {
+    color: inherit;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-text a:hover {
+    color: #cc0000;
+}
+
+
+.contact-map {
+    height: 100%;
+    min-height: 350px;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #f0f0f0;
+}
+
+
+
+
+.logo-dot {
+    width: 12px;
+    height: 12px;
+    background: #cc0000;
+    border-radius: 50%;
+}
+
+
+.social-btn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid #eee;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    background: #cc0000;
+    color: #fff;
+    border-color: #cc0000;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(204, 0, 0, 0.2);
+}
+
+/* Базовые стили футера */
+.footer {
+    background: #fdfdfd;
+    padding: 60px 0 20px;
+    border-top: 1px solid #eee;
+    color: #444;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-col h4 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #222;
+    border-bottom: 2px solid #6c5ce7;
+    display: inline-block;
+}
+
+.footer-links { list-style: none; padding: 0; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a { color: #666; text-decoration: none; transition: 0.3s; }
+.footer-links a:hover { color: #6c5ce7; }
+
+/* КРАСИВАЯ КНОПКА */
+.main-btn {
+    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+}
+
+.main-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4);
+}
+
+/* МОДАЛЬНОЕ ОКНО */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 40px;
+    border-radius: 24px;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+
+
+
+.close-btn {
+    position: absolute;
+    top: 15px; right: 20px;
+    background: none; border: none; font-size: 24px; cursor: pointer;
+}
+
+
+
+/* КРАСНАЯ ТЕМА */
+:root {
+    --main-red: #ff4d4d;
+    --dark-red: #d63031;
+}
+
+.footer-col h4 {
+    border-bottom: 2px solid var(--main-red) !important;
+}
+
+/* ОБЪЕМНЫЕ КНОПКИ СОЦСЕТЕЙ (КВАДРАТЫ) */
+.footer-socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-box {
+    width: 45px;
+    height: 45px;
+    background: white;
+    border: 2px solid var(--main-red);
+    color: var(--main-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px; /* Слегка скругленные квадраты */
+    box-shadow: 4px 4px 0px var(--main-red); /* Эффект объема */
+    transition: all 0.2s ease;
+}
+
+.social-box:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--dark-red);
+    background: var(--main-red);
+    color: white;
+}
+
+/* КРАСНАЯ КНОПКА ЗАПИСИ */
+.red-btn {
+    background: linear-gradient(135deg, var(--main-red) 0%, #ee5253 100%) !important;
+    box-shadow: 0 4px 15px rgba(255, 77, 77, 0.4) !important;
+}
+
+.red-btn:hover {
+    background: var(--dark-red) !important;
+    box-shadow: 0 6px 20px rgba(255, 77, 77, 0.6) !important;
+}
+
+/* Стили для нижней части футера */
+.footer-bottom {
+    margin-top: 40px;
+    padding: 25px 0;
+    border-top: 1px solid #eee; /* Тонкая линия сверху */
+    text-align: center;
+}
+
+.footer-bottom-content p {
+    font-size: 14px;
+    color: #888;
+    margin: 5px 0;
+}
+
+/* Выделение названия бренда красным */
+.footer-bottom-content span {
+    color: var(--main-red);
+    font-weight: 600;
+}
+
+/* Декоративная короткая линия под копирайтом */
+.footer-bottom-line {
+    width: 40px;
+    height: 2px;
+    background: var(--main-red);
+    margin: 15px auto;
+    border-radius: 2px;
+    opacity: 0.6;
+}
+
+.footer-made-by {
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Небольшой эффект при наведении на весь копирайт */
+.footer-bottom:hover .footer-bottom-line {
+    width: 80px;
+    opacity: 1;
+    transition: all 0.4s ease;
+}
+
+
+/* Эффект размытия фона */
+.modal-overlay {
+    background: rgba(15, 15, 15, 0.4);
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+}
+
+/* Контент окна */
+.modal-content {
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 50px 40px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Иконка ракеты */
+.rocket-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+    display: inline-block;
+    animation: rocketFloat 3s ease-in-out infinite;
+}
+
+@keyframes rocketFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+/* Заголовок */
+#modal-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+/* Группы ввода */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 16px 20px;
+    background: #f8f9fa;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    background: #fff;
+    border-color: #ff4d4d;
+    outline: none;
+    box-shadow: 0 10px 20px rgba(255, 77, 77, 0.1);
+}
+
+/* КРАСИВАЯ КРАСНАЯ КНОПКА */
+.red-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #ff4d4d 0%, #ee5253 100%);
+    color: white;
+    padding: 18px;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(255, 77, 77, 0.3);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.red-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(255, 77, 77, 0.5);
+}
+
+.red-btn:active {
+    transform: translateY(1px);
+}
+
+/* Подпись под кнопкой */
+.form-policy {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #999;
+    line-height: 1.4;
+}
+
+.form-policy a {
+    color: #ff4d4d;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 77, 77, 0.2);
+}
+
+/* Эффект плавающей ракеты */
+.rocket-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+    display: inline-block;
+    animation: rocketFloat 3s ease-in-out infinite;
+}
+
+@keyframes rocketFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(5deg); }
+}
+
+/* Стеклянный эффект для окна */
+.modal-overlay {
+    background: rgba(15, 15, 15, 0.4);
+    backdrop-filter: blur(12px);
+}
+
+.modern-card {
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 50px 40px;
+    box-shadow: 0 25px 50px -12px rgba(255, 77, 77, 0.2);
+    border: 1px solid rgba(255, 77, 77, 0.1);
+}
+
+/* Поля ввода стали мягче */
+.input-group input {
+    width: 100%;
+    padding: 16px 20px;
+    background: #fdf2f2;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    background: #fff;
+    border-color: #ff4d4d;
+    box-shadow: 0 10px 20px rgba(255, 77, 77, 0.1);
+}
+
+/* Красная кнопка во всю ширину */
+.full-width {
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+.main-form-card {
+    max-width: 450px;
+    border-radius: 30px;
+    padding: 50px 40px;
+}
+
+.modal-header h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.modal-header p {
+    color: #777;
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #cc0000;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(204, 0, 0, 0.1);
+}
+
+.submit-btn {
+    width: 100%;
+    background: #cc0000;
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: #a30000;
+    transform: translateY(-2px);
+}
+
+.form-note {
+    font-size: 0.75rem;
+    color: #999;
+    margin-top: 15px;
+    text-align: center;
+}
+
+
+
+
+.modern-form .main-btn.red-btn.full-width {
+    background: linear-gradient(135deg, #ff4d4d 0%, #ff1a1a 100%) !important;
+    color: white !important;
+    padding: 18px 30px !important;
+    border: none !important;
+    border-radius: 15px !important;
+    display: block !important;
+    width: 100% !important;
+    appearance: none !important; /* Убирает стандартный вид кнопки в Safari/Chrome */
+    -webkit-appearance: none;
+}
+
+
+
+
+@media (max-width: 480px) {
+    .stats-wide-card {
+        grid-template-columns: 1fr !important;
+    }
+}
+@media (max-width: 992px) {
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-main {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-logo, .footer-socials, .footer-links h4::after {
+        justify-content: center;
+    }
+    .footer-links h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr; 
+    }
+    
+    .contact-map {
+        height: 300px;
+    }
+}
+
+@media (min-width: 769px) {
+    .stat-box:not(:last-child) {
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .stats-wide-card {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+    .stat-num {
+        font-size: 2.8rem;
+    }
+}
+
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ФИНАЛЬНЫЙ ФИКС ДЛЯ МОБИЛОК (780px и меньше) */
+@media (max-width: 780px) {
+    
+    /* 1. Центрируем всё содержимое */
+    .container {
+        width: 100% !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        box-sizing: border-box;
+    }
+
+    /* 2. Исправляем Hero (Главный баннер) */
+    .hero {
+        padding: 60px 0;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-position: center !important; /* Картинка по центру */
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    /* 3. Выравниваем меню */
+    .nav {
+        flex-direction: row; /* В ряд, если короткие слова */
+        flex-wrap: wrap;     /* Если не влезают — перенесутся */
+        justify-content: center;
+        gap: 10px;
+        padding: 15px 5px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    /* 4. Карточки (Почему выбирают нас) */
+    .about-item {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .about-img img {
+        width: 100%;
+        max-width: 300px; /* Чтобы картинка не была огромной */
+        height: auto;
+        border-radius: 15px;
+    }
+
+    /* 5. Убираем горизонтальный скролл (когда сайт "плавает" вправо-влево) */
+    body, html {
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+@media (max-width: 780px) {
+    /* Контейнер для карты */
+    .contact-map {
+        width: 100% !important; /* На всю ширину экрана */
+        height: 300px !important; /* Уменьшаем высоту для мобильных */
+        margin-top: 20px;
+        padding: 0 !important; /* Убираем лишние отступы */
+        border-radius: 15px;
+        overflow: hidden; /* Чтобы края карты не вылезали за скругления */
+    }
+
+    #map, #map iframe {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    /* Располагаем блоки контактов один под другим */
+    .contact-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 780px) {
+    /* 1. Перестраиваем сетку футера в одну колонку */
+    .footer-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Центрируем всё содержимое */
+        text-align: center;
+        gap: 40px; /* Увеличиваем отступ между блоками */
+        padding: 0 20px;
+    }
+
+    /* 2. Колонки футера */
+    .footer-col {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* 3. Кнопка в футере */
+    .footer-col .main-btn {
+        width: 100%;      /* Кнопка на всю ширину */
+        max-width: 280px; /* Но не слишком огромная */
+        margin: 15px auto 0;
+        display: block;
+    }
+
+    /* 4. Соцсети */
+    .footer-socials {
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    /* 5. Навигация в футере (убираем лишние отступы) */
+    .footer-links {
+        padding: 0;
+        list-style: none;
+    }
+
+    .footer-links li {
+        margin-bottom: 10px;
+    }
+
+    /* 6. Нижняя часть (копирайт) */
+    .footer-bottom-content {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 0;
+    }
+
+    .footer-bottom-line {
+        width: 50px; /* Укорачиваем разделительную линию */
+        margin: 10px auto;
+    }
+}
